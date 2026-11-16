@@ -7,7 +7,7 @@ name = "disaster-response"
 version = "2.0.0"
 description = "End-to-end NLP pipeline classifying disaster messages into response categories"
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.12"
 authors = [{ name = "Chaojun Cao" }]
 dependencies = [
     "flask>=3.0",

@@ -1,7 +1,7 @@
 # End-to-End NLP Disaster Response Classification Pipeline
 
 ![CI](https://github.com/catherinecao123/end-to-end-nlp-disaster-response-classification-pipeline/actions/workflows/ci.yml/badge.svg)
-![Python](https://img.shields.io/badge/python-3.11%2B-blue)
+![Python](https://img.shields.io/badge/python-3.12%2B-blue)
 
 An end-to-end NLP pipeline that classifies disaster messages into 36 response
 categories, so emergency workers can route each message to the right relief
@@ -50,7 +50,7 @@ disaster_categories.csv┘   (SQLite)        (GridSearchCV)      (joblib)      (
 │   ├── app.py                      # Flask factory + `disaster-serve` CLI
 │   └── templates/                  # Jinja templates
 ├── tests/                          # pytest suite (ETL, text, model, app)
-├── .github/workflows/ci.yml        # tests on Python 3.11 / 3.12
+├── .github/workflows/ci.yml        # tests on Python 3.12
 ├── pyproject.toml                  # packaging + console scripts
 └── requirements.txt                # pinned dependencies
 ```
@@ -112,7 +112,7 @@ positives on infrequent categories.
 pytest -q   # 20 tests: ETL cleaning, tokenizer, model smoke run, Flask app
 ```
 
-CI runs the suite on Python 3.11 and 3.12 for every push and pull request.
+CI runs the suite on Python 3.12 for every push and pull request.
 
 ## What changed in the rebuild (vs. the 2021 original)
 
