@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: ["3.11", "3.12"]
+        python-version: ["3.12"]
     steps:
       - uses: actions/checkout@v4
 
@@ -21,6 +21,8 @@ jobs:
           python-version: ${{ matrix.python-version }}
           cache: pip
           cache-dependency-path: requirements-dev.txt
+      # Pinned numpy==2.5.4 requires Python >= 3.12; 3.11 cannot install
+      # requirements-dev.txt, so CI only tests the verified 3.12 env.
 
       - name: Install dependencies
         run: |
