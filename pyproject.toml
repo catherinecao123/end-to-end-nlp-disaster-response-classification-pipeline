@@ -33,3 +33,6 @@ disaster_response = ["templates/*.html"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+# Repo root on sys.path so `from tests.conftest import ...` works under
+# bare `pytest` (CI); `python -m pytest` adds it implicitly, `pytest` does not.
+pythonpath = ["."]
